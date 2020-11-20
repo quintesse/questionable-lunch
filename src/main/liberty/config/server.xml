@@ -1,0 +1,14 @@
+<server description="Open Liberty Health Check example">
+
+  <featureManager>
+      <feature>jaxrs-2.1</feature>  
+      <feature>mpHealth-1.0</feature>   
+      <feature>localConnector-1.0</feature>
+  </featureManager>
+
+  <httpEndpoint httpPort="${default.http.port}" httpsPort="${default.https.port}"
+                id="defaultHttpEndpoint" host="*" />
+
+  <webApplication name="HealthCheck" location="health-check.war" contextRoot="${app.context.root}"/>
+   
+</server>
